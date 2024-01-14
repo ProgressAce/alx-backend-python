@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Annotates the below function the appropriate types."""
 
-from typing import Iterator, Sequence
+from typing import Iterator, Sequence, List, Tuple
 
 
-def element_length(lst: Iterator[Sequence]) -> list[tuple[Sequence, int]]:
+def element_length(lst: Iterator[Sequence]) -> List[Tuple[Sequence, int]]:
     """Returns each element's length and value in tuple form.
 
     Arg:

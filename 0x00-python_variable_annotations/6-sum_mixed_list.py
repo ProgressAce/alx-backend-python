@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Defines a function that sums a mixed list of int and floats."""
 
-from typing import Union
+from typing import Union, List
 
 
-def sum_mixed_list(mxd_lst: list[Union[int, float]]) -> float:
+def sum_mixed_list(mxd_lst: List[Union[int, float]]) -> float:
     """Returns the sum of all the elements in <mxd_lst>.
 
     Arg:

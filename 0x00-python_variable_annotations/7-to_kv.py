@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Defines a function that returns a tuple."""
 
-from typing import Union
+from typing import Union, Tuple
 
 
-def to_kv(k: str, v: Union[int, float]) -> tuple:
+def to_kv(k: str, v: Union[int, float]) -> Tuple:
     """Returns a tuple of a string and the square of v as a float.
 
     Args:
