@@ -14,6 +14,9 @@ async def print_yielded_values():
     return result
 
 
+print(f"TYPE: {type(print_yielded_values)}")
+print(f"TYPE : {type(print_yielded_values())}")
+
 s = time.perf_counter()
 res = asyncio.run(print_yielded_values())
 end = time.perf_counter()

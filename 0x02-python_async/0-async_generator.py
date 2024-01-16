@@ -5,7 +5,7 @@ import asyncio
 import random
 
 
-async def async_generator():
+async def async_generator() -> float:
     """Loops 10 times, and each time asynchronously waiting 1 second.
 
     Yield:
