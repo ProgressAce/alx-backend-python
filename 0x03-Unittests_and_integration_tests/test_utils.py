@@ -49,11 +49,13 @@ class TestGetJson(TestCase):
     def test_get_json(self, url, desired_output):
         """Ensures that the function works as intended."""
 
-        # create json method for mock object
+        # create mock object to be used as a return
         mock_response = Mock()
         mock_response.json.return_value = desired_output
 
-        with patch("requests.get", return_value=desired_output) as mock_get:
+        with patch(
+            "requests.get", return_value=mock_response.json.return_value
+        ) as mock_get:
             response = get_json(url)
 
             self.assertEqual(response, desired_output)
