@@ -30,10 +30,10 @@ class TestAccessNestedMap(TestCase):
             ({"a": 1}, ("a", "b"), KeyError),
         ]  # empty map  # extra key path
     )
-    def test_access_nested_map_exception(self, nested_map, path, desired_output):
+    def test_access_nested_map_exception(self, nested_map, path, exception):
         """Ensures that a KeyError is raised with these invalid arguments"""
 
-        with self.assertRaises(desired_output):
+        with self.assertRaises(exception):
             access_nested_map(nested_map, path)
 
 
